@@ -1,0 +1,419 @@
+
+/*font-family: 'Bebas Neue', sans-serif;
+font-family: 'Quicksand', sans-serif;*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+
+
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black; /* Establece el color de fondo del cuerpo como negro */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto; /* Establece un margen automático a los lados para centrar el contenedor */
+    padding: 20px; /* Agrega un relleno al contenedor si es necesario */
+    box-sizing: border-box; /* Asegura que el relleno y el margen no afecten el ancho total */
+}
+
+/* Ajusta el fondo de .container para que sea negro */
+.invitation {
+    background-color: black;
+}
+
+
+
+
+
+
+
+
+
+
+
+html {
+    scroll-behavior: smooth;
+    scroll-snap-type: y proximity;
+    scroll-snap-type: y mandatory;
+    scroll-snap-points-y: repeat(100%);
+}
+
+/* Ajusta el valor de scroll-snap-points-y según sea necesario */
+
+
+
+
+
+.header{
+    background-image: linear-gradient(
+    rgba(0,0,0,0.7), 
+    rgba(0,0,0,0.7)), 
+    url(imagenes/ojos.jpg);
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 40vh;
+    display: flex;
+    align-items: center;
+}
+
+.menu{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    color: #f9d3d3;
+    font-size: 25px;
+}
+
+.menu .navbar ul li {
+    position: relative;
+    float: left;
+}
+
+.menu .navbar ul li a{
+    font-family: 'Bebas Neue';
+    font-size: 23px;
+    padding: 20px;
+    color: #f9d3d3;
+    display: block;
+}
+
+.menu .navbar ul li a:hover {
+    color: red; /* Color del texto al pasar el mouse */
+    -webkit-text-stroke: 1px white; /* Ancho y color del borde alrededor del texto */
+    text-shadow: 0 0 10px white; /* Sombreado blanco (ajusta los valores según tus preferencias) */
+}
+
+#menu {
+    display: none;
+}
+
+.menu-icono {
+    width: 25px;
+}
+
+.menu label {
+    cursor: pointer;
+    display: none;
+}
+
+.header-content {
+    text-align: center;
+}
+
+.header-content h1 {
+    font-family: 'Bebas Neue';
+    font-size: 65px;
+    line-height: 80px;
+    color: #ffffff;
+    margin-top: 65px;
+    margin-bottom: 35px;
+}
+
+.header-content p {
+    font-size: 35px;
+    font-family: 'Cinzel', serif;
+    color: #f9d3d3;
+}
+
+
+h2{
+    font-family: 'Quicksand', sans-serif;
+}
+
+
+
+/* Estilos para la sección "¿Qué es CROSSFIT?" */
+
+.que-es-crossfit {
+    display: flex; /* Utiliza flexbox para organizar los elementos secundarios en una fila */
+    padding: 25px 0; /* Añade un espacio de relleno de 25 píxeles arriba y abajo */
+    background-color: rgb(0, 0, 0); /* Establece el color de fondo a negro */
+    position: relative; /* Establece la posición relativa para posicionamiento de elementos hijos */
+}
+
+/* Estilos para el contenido principal de la sección "¿Qué es CROSSFIT?" */
+
+.exp-crosffit {
+    text-align: center; /* Centra el texto horizontalmente */
+    flex: 1; /* Hace que este elemento ocupe el espacio disponible en el contenedor flex (resto del espacio después del carrusel) */
+    padding: 20px; /* Añade un espacio de relleno de 20 píxeles en todos los lados */
+}
+
+.exp-crosffit h2 {
+    font-family: 'Bebas Neue';
+    margin-top: 45px; /* Ajusta el espacio en la parte superior del párrafo según tus necesidades */
+    margin-bottom: 40px; /* Ajusta el espacio en la parte inferior del párrafo según tus necesidades */
+    font-size: 45px; /* Ajusta el tamaño de la fuente según tus necesidades */
+    line-height: 1.5; /* Ajusta la altura de línea según tus necesidades */
+}
+
+.exp-crosffit p {
+    font-family: 'Cinzel', serif;
+    margin-top: 25px; /* Ajusta el espacio en la parte superior del párrafo según tus necesidades */
+    margin-bottom: 10px; /* Ajusta el espacio en la parte inferior del párrafo según tus necesidades */
+    font-size: 20px; /* Ajusta el tamaño de la fuente según tus necesidades */
+    line-height: 1.8; /* Ajusta la altura de línea según tus necesidades */
+    font-weight: 900; /* Ajusta el espesor de la letra (600 es un ejemplo, puedes usar otros valores como 400, 700, etc.) */
+    /*color: #ff0000;  Ajusta el color del texto según tus necesidades, aquí es un rojo (#ff0000) */
+    /*color: red;  Color del texto al pasar el mouse */
+    -webkit-text-stroke: 1px white; /* Ancho y color del borde alrededor del texto */
+    text-shadow: 0 0 10px rgb(245, 2, 2); /* Sombreado blanco (ajusta los valores según tus preferencias) */
+
+}
+
+
+
+/* Estilos específicos para el título dentro del contenido de "¿Qué es CROSSFIT?" */
+
+.exp-crosffit .titulo {
+    color: aliceblue; /* Establece el color del texto a aliceblue */
+    text-transform: uppercase; /* Transforma el texto a mayúsculas */
+}
+
+
+
+/*slider-box*/
+
+.slider-box {
+    width: 500px;
+    height: 400px;
+    margin: 50px 75px 0 auto;
+    overflow: hidden;
+}
+
+.slider-box ul {
+    display: flex;
+    padding: 0;
+    width: 400%;
+    animation: slide 10s infinite linear;
+}
+
+.slider-box li {
+    width: 25%;
+    list-style: none;
+    position: relative;
+}
+
+.img-carrusel {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@keyframes slide {
+    0% { margin-left: 0%; }
+    25% { margin-left: 0%; }
+
+    30% { margin-left: -100%; }
+    55% { margin-left: -100%; }
+
+    60% { margin-left: -200%; }
+    85% { margin-left: -200%; }
+
+    90% { margin-left: -300%; }
+    100% { margin-left: -300%; }
+}
+
+
+/*Servicios*/
+.opc-title {
+    color: #fff; /* Color blanco */
+    text-align: center; /* Centra el texto horizontalmente */
+    font-family: 'Bebas Neue';
+    font-size: 55px; /* Ajusta el tamaño de la fuente según tus necesidades */
+    text-indent: 500px; /* Ajusta la cantidad de desplazamiento hacia la derecha según tus necesidades */
+}
+
+
+.services {
+    background-color: rgb(0, 0, 0); /* Establece el color de fondo a negro */
+}
+/* Establece el contenedor de servicios como un contenedor flexible */
+.services-grup {
+    display: flex; /* Permite que los elementos se envuelvan en la siguiente línea si no hay suficiente espacio */
+    flex-wrap: wrap; /* Distribuye el espacio alrededor de los elementos, creando espacio entre ellos */
+    justify-content: space-around;
+}
+
+/* Establece el ancho y el margen para cada servicio */
+.services-1,
+.services-2,
+.services-3,
+.services-4 {
+    /* Ajusta el ancho según tus necesidades */
+    width: 45%;
+    /* Añade un margen alrededor de cada servicio para separarlos */
+    margin: 10px;
+    /* Establece el contenedor como un contenedor relativo para que los elementos absolutamente posicionados se basen en él */
+    position: relative;
+}
+
+/* Ajusta el tamaño de las imágenes para que ocupen todo el espacio del contenedor */
+.services-grup img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.5; /* Ajusta la opacidad según tus necesidades (0.0 - 1.0) */
+
+}
+
+/* Centra los elementos <h3> sobre las imágenes */
+.services-1 h3,
+.services-2 h3,
+.services-3 h3,
+.services-4 h3 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff; /* Color del texto (ajusta según tus necesidades) */
+    text-align: center;
+    margin: 0; /* Elimina el margen predeterminado del elemento <h3> */
+    
+    font-family: 'Bebas Neue';
+    font-size: 55px;
+    line-height: 80px;
+    text-shadow: 0 0 10px rgb(245, 2, 2); /* Sombreado blanco (ajusta los valores según tus preferencias) */
+    /*color: #ffffff;*/
+}
+
+
+
+
+/* Estilo para el h2 dentro de information-container */
+.information-container h2 {
+    font-family: 'Bebas Neue', sans-serif; /* Cambia la fuente del h2 */
+    font-size: 56px; /* Ajusta el tamaño de la fuente según tus necesidades */
+    margin-bottom: 10px; /* Añade un espacio en la parte inferior del h2 */
+   
+    color: white; /* Establece el color del texto como blanco */
+}
+
+/* Estilo para el p dentro de information-container */
+.information-container p {
+    font-family: 'Cinzel', serif; /* Cambia la fuente del p */
+    font-size: 20px; /* Ajusta el tamaño de la fuente según tus necesidades */
+    line-height: 1.5; /* Ajusta la altura de línea según tus necesidades */
+    margin-top: 10px; /* Añade un espacio en la parte superior del p */
+    color: #f9d3d3;
+}
+
+
+/* Selecciona el contenedor principal con la clase "invitation" */
+.invitation {
+    display: flex; /* Establece el modelo de diseño como flexbox */
+    flex-direction: column; /* Organiza los elementos en columna en pantallas pequeñas */
+    align-items: center; /* Centra los elementos horizontalmente */
+    min-height: 90vh; /* Establece una altura mínima del 80% del viewport height */
+    background-color: black; /* Establece el color de fondo como negro */
+}
+
+/* Selecciona el contenedor de información que incluye el h2 y el p */
+.information-container {
+    text-align: center; /* Centra el contenido del contenedor horizontalmente */
+    padding: 0px; /* Añade un espacio interno alrededor del contenedor */
+}
+
+/* Selecciona la imagen dentro del contenedor */
+.image-container img {
+    max-width: 100%; /* Asegura que la imagen no exceda el ancho del contenedor */
+    height: auto; /* Mantiene la proporción original de la imagen */
+}
+
+/* Media query para pantallas más grandes (ancho mínimo de 768px) */
+@media (min-width: 768px) {
+    .invitation {
+        flex-direction: row; /* Cambia la dirección a fila para pantallas más grandes */
+        justify-content: center; /* Centra los elementos horizontalmente */
+    }
+
+    .image-container {
+        margin-left: 20px; /* Añade un margen a la izquierda de la imagen */
+    }
+}
+
+
+
+/* Estilos generales del footer */
+.footer {
+    background-color: #000000; /* Color de fondo del footer, ajusta según tus necesidades */
+    color: #fff; /* Color del texto, ajusta según tus necesidades */
+    padding: 20px; /* Espaciado interno del footer */
+
+    font-family: 'Bebas Neue';
+    font-size: 35px;
+    line-height: 80px;
+    text-shadow: 0 0 10px rgb(245, 2, 2); /* Sombreado blanco (ajusta los valores según tus preferencias) */
+    /*color: #ffffff;*/
+
+}
+
+/* Contenedor para el h3 y los iconos */
+
+.link-footer li a {
+    display: inline-block;
+    transition: transform 0.3s, box-shadow 0.3s; /* Agrega transiciones para suavizar los cambios */
+}
+
+.link-footer li a:hover {
+    transform: scale(1.5); /* Aumenta el tamaño de la imagen en un 50% */
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.5); /* Agrega una sombra roja con una ligera transparencia */
+}
+
+
+.link-footer {
+    display: flex; /* Utiliza flexbox para organizar los elementos en fila */
+    align-items: center; /* Centra verticalmente los elementos dentro del contenedor */
+}
+
+/* Estilo específico para el h3 en el footer */
+.link-footer h3 {
+    margin-right: 200px; /* Añade un margen a la derecha del h3 para separarlo de los iconos */
+}
+
+/* Estilo para la lista de iconos */
+.link-footer ul {
+    list-style: none; /* Elimina los estilos de la lista */
+    padding: 0; /* Elimina el espaciado interno de la lista */
+    display: flex; /* Utiliza flexbox para organizar los iconos en fila */
+}
+
+/* Estilo para los elementos de la lista (los iconos) */
+.link-footer ul li {
+    margin-right: 100px; /* Añade un margen a la derecha de cada ícono para separarlos */
+}
+
+/* Estilo específico para los iconos */
+.link-footer ul li a {
+    color: #fff; /* Color del ícono, ajusta según tus necesidades */
+    font-size: 34px; /* Tamaño de la fuente del ícono, ajusta según tus necesidades */
+    text-decoration: none; /* Elimina la subrayado de los enlaces */
+}
+
+/* Estilo específico para el ícono de Instagram */
+.link-footer ul li a.fa-instagram:before {
+    content: "\f16d"; /* Código del ícono de Instagram */
+}
+
+/* Estilo específico para el ícono de WhatsApp */
+.link-footer ul li a.fa-whatsapp:before {
+    content: "\f232"; /* Código del ícono de WhatsApp */
+}
